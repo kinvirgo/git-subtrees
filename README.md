@@ -8,7 +8,7 @@
 git subtree -h
 ```
 
-# 2、添加子项目
+# 2、添加子仓库
 
 ```sh
 # git subtree add --prefix=<子项目目录> <代码源> <分支>
@@ -18,6 +18,23 @@ git subtree add --prefix=subtree/git-subtree-module-1 https://github.com/kinvirg
 
 # 添加--squash合并提交日志，不推荐
 git subtree add --prefix=subtree/git-subtree-module-1 https://github.com/kinvirgo/git-subtree-module-1.git main --squash
+```
+
+# 3、删除子仓库
+
+直接删除`subtrees/sub-repo`目录，将删除操作提交
+
+# 4、更新子仓库
+
+```sh
+# git subtree add --prefix=<子项目目录> <代码源> <分支>
+git subtree pull --prefix=subtree/git-subtree-module-1 https://github.com/kinvirgo/git-subtree-module-1.git main
+```
+
+# 5、提交子仓库代码
+
+```sh
+git subtree push --prefix=subtree/git-subtree-module-1 https://github.com/kinvirgo/git-subtree-module-1.git main
 ```
 
 # 注意
